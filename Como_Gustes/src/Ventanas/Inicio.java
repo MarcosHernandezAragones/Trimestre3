@@ -184,14 +184,14 @@ public class Inicio extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         String producto;
-        
+        modeloBUS.clear();
         producto=jTextFieldBUS.getText();
         
         for (int i = 0; i < modeloLis.getSize(); i++) {
             if (modeloLis.get(i).startsWith(producto)) {
                 System.out.println(modeloLis.getElementAt(i));
                 modeloBUS.addElement(modeloLis.getElementAt(i));
-                break;
+               
             }
         }
         jListPRO.setModel(modeloBUS);
